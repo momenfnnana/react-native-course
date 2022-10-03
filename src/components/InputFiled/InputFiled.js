@@ -9,6 +9,7 @@ const InputFiled = ({
   secureTextEntry,
   value,
   onChangeText,
+  onBlur,
 }) => {
   return (
     <View style={styles.container}>
@@ -20,7 +21,7 @@ const InputFiled = ({
           secureTextEntry={secureTextEntry || false}
           value={value}
           onChangeText={onChangeText}
-          onChange
+          onBlur={onBlur}
         />
         {rightIcon}
       </View>
