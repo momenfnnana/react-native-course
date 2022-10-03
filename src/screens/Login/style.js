@@ -14,6 +14,12 @@ const styles = StyleSheet.create({
   input: {
     height: 20,
   },
+  errorMessage: {
+    fontSize: 12,
+    color: "red",
+    marginLeft: 18,
+    marginTop: 12,
+  },
 });
 
 export default styles;
