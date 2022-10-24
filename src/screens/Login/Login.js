@@ -72,6 +72,20 @@ const Login = () => {
         console.log({ error });
       });
     rest.resetForm({ email: "", password: "" });
+    // another way to sending data in api calls using something called formdata
+    // const formData = new FormData();
+    // formData.append("name", values.name);
+    // formData.append("email", values.email);
+    // formData.append("password", values.password);
+    // formData.append("phone", values.phone);
+    // axios({
+    //   url: "https://student.valuxapps.com/api/register",
+    //   data: formData,
+    // }).then(response=>{
+    //   console.log({response});
+    // }).catch(error=>{
+    //   console.log({error});
+    // });
   };
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
