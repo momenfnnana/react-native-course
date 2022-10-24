@@ -13,7 +13,7 @@ import {
 import Docs from "./src/screens/Docs/Docs";
 import Home from "./src/screens/Home/Home";
 import Login from "./src/screens/Login/Login";
-
+import "./src/axiosConfig";
 const data = [
   {
     title: "title1",
