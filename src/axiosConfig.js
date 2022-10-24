@@ -8,17 +8,15 @@ export const setAccessToken = (token) => {
 };
 const readAccessToken = () => {
   AsyncStorage.getItem("accessToken").then((res) => {
-    axios.defaults.headers.common = {
-      Authorization: res,
-    };
+    setAccessToken(res);
   });
 };
-readAccessToken();
+
 axios.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error?.response?.status === 401) {
-    //   return RootNavigation.navigate("AuthFlow", { screen: "Login" });
+      //   return RootNavigation.navigate("AuthFlow", { screen: "Login" });
     }
     // showErrorMessage(error?.response?.data?.Message);
     throw error;
